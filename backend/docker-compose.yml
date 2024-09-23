@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:20-alpine 
+    container_name: node-app
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/assignment
+    command: npm start
+    depends_on:
+      - mongo  # Wait for the MongoDB service to be up and running
+    networks:
+      - app-network
+
+  # MongoDB database service
+  mongo:
+    image: mongo:6.0  # MongoDB version 6.x
+    container_name: mongo-db
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db  # Persist MongoDB data
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:  
+
+networks:
+  app-network:  # Custom network for the app and DB
+    driver: bridge

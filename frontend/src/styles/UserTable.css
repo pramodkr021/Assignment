@@ -1,0 +1,22 @@
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.table-container table {
+    width: 100%; /* Make the table take full width */
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.no-users {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}

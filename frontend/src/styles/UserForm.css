@@ -1,0 +1,30 @@
+.user-form {
+    width: 100%; 
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.form-group {
+    padding-right: 8rem;
+}
+
+.user-form input, .user-form {
+    width: 100%; /* Input fields and button width */
+    margin-top: 5px; /* Space between label and input */
+    margin-bottom: 10px; /* Space below input fields */
+    padding: 10px; 
+}
+
+.user-form label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+}
+
+.user-form button {
+    margin-top: 5px;
+    padding: 8px;
+}
+
+.user-form input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
