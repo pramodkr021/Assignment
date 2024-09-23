@@ -23,3 +23,5 @@ This repository contains solution code for question 1-10 from the document share
 </ol>
 
 Now both the application are running at <strong>localhost:3000</strong> and <strong>3001</strong> respectively
+
+<strong>NOTE</strong>: You might run into error, if the Mongo Service in the Windows is not running. The backend will throw error for connection refused.
